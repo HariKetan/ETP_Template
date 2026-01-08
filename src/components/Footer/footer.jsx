@@ -15,8 +15,8 @@ const footer = ({ data, totalPages = 6, page, setPage, playSound, nextButtonDisa
                     }
                 }}
             />
-            <PageInd totalPages={totalPages} page={page} />
-            {/* <NavText data={data} /> */}
+            {/* <PageInd totalPages={totalPages} page={page} /> */}
+            <NavText data={data} />
             <Button 
                 className={`h-[8vh] w-[9vw] text-[4vw] pb-[1vh] ${nextButtonDisabled ? 'bg-gray-400' : 'bg-[#F9A942]'}`}
                 text={data.navigatorArea.button2.text} 

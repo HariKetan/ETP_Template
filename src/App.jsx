@@ -28,11 +28,14 @@ function App() {
   }
 
 
+  // Determine which language to use based on preferredLanguage
+  const language = window.preferredLanguage // default to 'id' if not set
+  
   let currentPage = null
-  if (data?.id?.["standard-ui"]) {
-    currentPage = data?.id?.["standard-ui"]?.[0]?.[`page${page}`]
-  } else if (data?.en?.["standard-ui"]) {
+  if (language === 'en' && data?.en?.["standard-ui"]) {
     currentPage = data?.en?.["standard-ui"]?.[0]?.[`page${page}`]
+  } else if (language === 'id' && data?.id?.["standard-ui"]) {
+    currentPage = data?.id?.["standard-ui"]?.[0]?.[`page${page}`]
   }
 
 
